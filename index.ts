@@ -5,8 +5,8 @@ import { env } from "process";
 // Asking Question from Users through Inquirer
 
 let answer = await inquirer.prompt([
-    {message: "Enter Frist Number", type: "number", name: "fristNumber"},
-    {message: "Enter Second Number", type:"number", name: "secondNumber"},
+    {message: "Enter your Frist Number", type: "number", name: "fristNumber"},
+    {message: "Enter your Second Number", type:"number", name: "secondNumber"},
     {
         message: "Select one Operator to perform Operations",
         type: "list",
@@ -27,8 +27,10 @@ else if (answer.operator === "Multiplication"){
     console.log(answer.fristNumber * answer.secondNumber);
 }
 else if (answer.operator === "Division"){
-    console.log(answer.fristNumber / answer.secondNumber);
+    console.log(answer.fristNumber / answer.secondNumber); 
+}    
+else{ 
+    console.log("invalid input") 
 }
-else{
-    console.log("invalid input")
-}
+
+console.log("THE END");       
